@@ -35,13 +35,13 @@ class Star {
     // the new x-coordinate and y-coordinate of the star.
     // Which means if I decrease the value of "z" (which is a divisor),
     // the outcome will be bigger.
-    // Wich means the more the speed value is bigger, the more the "z" decrease,
+    // Which means the more the speed value is bigger, the more the "z" decrease,
     // and the more the x and y coordinates increase.
     // Note: the "z" value is the first value I updated for the new frame.
     z = z - speed;
     // when the "z" value equals to 1, I'm sure the star have passed the
     // borders of the canvas( probably it's already far away from the borders),
-    // so i can place it on more time in the canvas, with new x, y and z values.
+    // so I can place it on more time in the canvas, with new x, y and z values.
     // Note: in this way I also avoid a potential division by 0.
     if (z < 1) {
       z = width/2;
@@ -59,7 +59,7 @@ class Star {
     // the division x / z get a number between 0 and a very high number,
     // we map this number (proportionally to a range of 0 - 1), inside a range of 0 - width/2.
     // In this way we are sure the new coordinates "sx" and "sy" move faster at each frame
-    // and which they finish their travel outside of the canvas (they finish when "z" is less than a).
+    // and which they finish their travel outside of the canvas (they finish when "z" is less than x).
 
     float sx = map(x / z, 0, 1, 0, width/2);
     float sy = map(y / z, 0, 1, 0, height/2);;
@@ -68,7 +68,7 @@ class Star {
     float r = map(z, 0, width/2, 16, 0);
     ellipse(sx, sy, r, r);
 
-    // Here i use the "pz" valute to get the previous position of the stars,
+    // Here I use the "pz" valute to get the previous position of the stars,
     // so I can draw a line from the previous position to the new (current) one.
     float px = map(x / pz, 0, 1, 0, width/2);
     float py = map(y / pz, 0, 1, 0, height/2);
