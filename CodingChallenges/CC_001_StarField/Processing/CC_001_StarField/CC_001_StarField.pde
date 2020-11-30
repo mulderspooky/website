@@ -20,7 +20,7 @@ void setup() {
 }
 
 void draw() {
-  // i link the value of the speed variable to the mouse position.
+  // I link the value of the speed variable to the mouse position.
   speed = map(mouseX, 0, width, 0, 50);
 
   background(0);
