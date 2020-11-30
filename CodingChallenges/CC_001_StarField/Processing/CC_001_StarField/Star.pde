@@ -55,7 +55,7 @@ class Star {
     fill(255);
     noStroke();
 
-    // with theese "map", I get the new star positions
+    // with these "map", I get the new star positions
     // the division x / z get a number between 0 and a very high number,
     // we map this number (proportionally to a range of 0 - 1), inside a range of 0 - width/2.
     // In this way we are sure the new coordinates "sx" and "sy" move faster at each frame
